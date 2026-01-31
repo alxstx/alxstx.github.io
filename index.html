@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alexander Stepanov</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body class="antialiased">
+
+    <!-- NAV -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur border-b border-border transition-shadow">
+      <div class="max-w-5xl mx-auto flex items-center justify-between px-6 h-16">
+        <a href="#" class="text-lg font-bold tracking-tight">AS</a>
+        <div class="hidden md:flex items-center gap-8 text-sm font-medium text-muted">
+          <a href="#experience" class="hover:text-primary transition">Experience</a>
+          <a href="#skills" class="hover:text-primary transition">Skills</a>
+          <a href="#education" class="hover:text-primary transition">Education</a>
+        </div>
+        <button id="menu-btn" class="md:hidden p-2 text-muted hover:text-primary">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden border-t border-border bg-white px-6 pb-4 space-y-3 text-sm font-medium text-muted">
+        <a href="#experience" class="block py-1 hover:text-primary">Experience</a>
+        <a href="#skills" class="block py-1 hover:text-primary">Skills</a>
+        <a href="#education" class="block py-1 hover:text-primary">Education</a>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="min-h-screen flex items-center pt-16">
+      <div class="max-w-5xl mx-auto px-6 py-24 md:py-32 flex flex-col-reverse md:flex-row md:items-center md:gap-16">
+       <div class="flex-1">
+        <p class="text-accent font-semibold text-sm tracking-wide uppercase mb-4">Engineer &middot; Researcher &middot; Builder</p>
+        <h1 class="text-4xl md:text-6xl font-bold leading-tight tracking-tight mb-6">Alexander Stepanov</h1>
+        <p class="text-lg md:text-xl text-muted max-w-2xl mb-8 leading-relaxed">
+          Computer Science student at DHBW &amp; UC Berkeley. Lead Engineer at HERO2, Corporate Student at Hewlett Packard Enterprise, and Researcher at Berkeley IEOR &mdash; focused on algorithmic design &amp; operations research, GPU optimization, and high-performance computing.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="mailto:stepanovalexander702@gmail.com" class="inline-flex items-center gap-2 border border-border px-6 py-3 rounded-lg hover:border-accent hover:text-accent transition font-semibold">
+            Get in Touch
+          </a>
+        </div>
+       </div>
+       <div class="mb-10 md:mb-0 flex-shrink-0">
+         <img src="/photo.jpg" alt="Alexander Stepanov" class="w-48 h-48 md:w-64 md:h-64 rounded-full object-cover border-4 border-border shadow-lg" />
+       </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="bg-light py-24">
+      <div class="max-w-5xl mx-auto px-6">
+        <h2 class="text-3xl font-bold tracking-tight mb-12">Experience</h2>
+        <div class="space-y-12">
+
+          <!-- Berkeley IEOR -->
+          <div class="relative pl-8 border-l-2 border-border">
+            <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-accent"></div>
+            <p class="text-sm text-muted mb-1">Jan 2026 &mdash; Present &middot; Berkeley</p>
+            <h3 class="text-xl font-semibold">Researcher</h3>
+            <p class="text-accent font-medium mb-2">Berkeley Industrial Engineering &amp; Operations Research</p>
+            <ul class="text-muted space-y-1 list-disc list-inside">
+              <li>Research at the intersection of optimization and machine learning</li>
+              <li>Guided by Prof. Dr. Hochbaum</li>
+            </ul>
+          </div>
+
+          <!-- HERO2 -->
+          <div class="relative pl-8 border-l-2 border-border">
+            <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-accent"></div>
+            <p class="text-sm text-muted mb-1">Jun 2025 &mdash; Present &middot; Berkeley, CA</p>
+            <h3 class="text-xl font-semibold">Lead Engineer</h3>
+            <p class="text-accent font-medium mb-2">HERO2</p>
+            <ul class="text-muted space-y-1 list-disc list-inside">
+              <li>Building the first US platform tokenizing sustainable mobility into verifiable carbon credits</li>
+              <li>Development of partner and admin portal: UI &amp; API design, data modeling with PostgreSQL</li>
+              <li>Leading the App &amp; Website Development</li>
+              <li>Leading Interns from UC Berkeley in building ML models for trip segmentation and location prediction</li>
+            </ul>
+          </div>
+
+          <!-- HPE Research -->
+          <div class="relative pl-8 border-l-2 border-border">
+            <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-accent"></div>
+            <p class="text-sm text-muted mb-1">Aug 2025 &mdash; Jan 2026 &middot; B&ouml;blingen</p>
+            <h3 class="text-xl font-semibold">Research Engineering Intern &mdash; LSIP Labs</h3>
+            <p class="text-accent font-medium mb-2">Hewlett Packard Enterprise</p>
+            <ul class="text-muted space-y-1 list-disc list-inside">
+              <li>Developed and optimized a GPU-based hardware simulator for in-memory computing accelerators</li>
+              <li>Solved combinatorial optimization problems using memristive SAT solvers</li>
+            </ul>
+          </div>
+
+          <!-- HPE HPC -->
+          <div class="relative pl-8 border-l-2 border-border">
+            <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-accent"></div>
+            <p class="text-sm text-muted mb-1">Mar 2025 &mdash; Jun 2025 &middot; B&ouml;blingen</p>
+            <h3 class="text-xl font-semibold">Software Engineering Intern &mdash; HPC AI &amp; Delivery</h3>
+            <p class="text-accent font-medium mb-2">Hewlett Packard Enterprise</p>
+            <ul class="text-muted space-y-1 list-disc list-inside">
+              <li>Developed an automation system for generating OS images for supercomputing node deployment</li>
+            </ul>
+          </div>
+
+          <!-- HPE Services -->
+          <div class="relative pl-8 border-l-2 border-border">
+            <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-accent"></div>
+            <p class="text-sm text-muted mb-1">Oct 2024 &mdash; Dec 2024 &middot; B&ouml;blingen</p>
+            <h3 class="text-xl font-semibold">Software Engineering Intern &mdash; Services</h3>
+            <p class="text-accent font-medium mb-2">Hewlett Packard Enterprise</p>
+            <ul class="text-muted space-y-1 list-disc list-inside">
+              <li>Designed and implemented software to automate the update process for X-ray imaging devices</li>
+            </ul>
+          </div>
+
+          <!-- Pinetco -->
+          <div class="relative pl-8 border-l-2 border-border">
+            <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-accent"></div>
+            <p class="text-sm text-muted mb-1">Mar 2022 &mdash; Sep 2023 &middot; Wuppertal</p>
+            <h3 class="text-xl font-semibold">Junior IT Consultant</h3>
+            <p class="text-accent font-medium mb-2">Pinetco</p>
+            <ul class="text-muted space-y-1 list-disc list-inside">
+              <li>Supported software testing and project coordination for client-focused apps and websites</li>
+              <li>Worked with HubSpot and managed multiple digital projects</li>
+            </ul>
+          </div>
+
+          <!-- Freelance -->
+          <div class="relative pl-8 border-l-2 border-border">
+            <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-accent"></div>
+            <p class="text-sm text-muted mb-1">Nov 2020 &mdash; Mar 2022</p>
+            <h3 class="text-xl font-semibold">Freelance Software Programmer &amp; Python Educator</h3>
+            <p class="text-accent font-medium mb-2">Self-employed</p>
+            <ul class="text-muted space-y-1 list-disc list-inside">
+              <li>Built web scrapers, parsers, automation bots, and GUIs using Python</li>
+              <li>Scripting for XML processing and database interactions with SQL</li>
+              <li>Taught children programming fundamentals using Python</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="py-24">
+      <div class="max-w-5xl mx-auto px-6">
+        <h2 class="text-3xl font-bold tracking-tight mb-12">Skills</h2>
+        <div class="flex flex-wrap gap-3">
+          <span class="px-4 py-2 bg-light rounded-full text-sm font-medium border border-border hover:border-accent hover:text-accent transition cursor-default">Automation</span>
+          <span class="px-4 py-2 bg-light rounded-full text-sm font-medium border border-border hover:border-accent hover:text-accent transition cursor-default">Data Analysis</span>
+          <span class="px-4 py-2 bg-light rounded-full text-sm font-medium border border-border hover:border-accent hover:text-accent transition cursor-default">High Performance Computing</span>
+          <span class="px-4 py-2 bg-light rounded-full text-sm font-medium border border-border hover:border-accent hover:text-accent transition cursor-default">Python</span>
+          <span class="px-4 py-2 bg-light rounded-full text-sm font-medium border border-border hover:border-accent hover:text-accent transition cursor-default">GPU Computing</span>
+          <span class="px-4 py-2 bg-light rounded-full text-sm font-medium border border-border hover:border-accent hover:text-accent transition cursor-default">Machine Learning</span>
+          <span class="px-4 py-2 bg-light rounded-full text-sm font-medium border border-border hover:border-accent hover:text-accent transition cursor-default">Optimization</span>
+          <span class="px-4 py-2 bg-light rounded-full text-sm font-medium border border-border hover:border-accent hover:text-accent transition cursor-default">SQL</span>
+          <span class="px-4 py-2 bg-light rounded-full text-sm font-medium border border-border hover:border-accent hover:text-accent transition cursor-default">Web Development</span>
+          <span class="px-4 py-2 bg-light rounded-full text-sm font-medium border border-border hover:border-accent hover:text-accent transition cursor-default">Software Testing</span>
+          <span class="px-4 py-2 bg-light rounded-full text-sm font-medium border border-border hover:border-accent hover:text-accent transition cursor-default">Web Scraping</span>
+          <span class="px-4 py-2 bg-light rounded-full text-sm font-medium border border-border hover:border-accent hover:text-accent transition cursor-default">Project Coordination</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="bg-light py-24">
+      <div class="max-w-5xl mx-auto px-6">
+        <h2 class="text-3xl font-bold tracking-tight mb-12">Education</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-white rounded-xl p-6 border border-border">
+            <h3 class="text-xl font-semibold mb-1">University of California, Berkeley</h3>
+            <p class="text-accent font-medium mb-2">Bachelor's degree, Computer Science</p>
+            <p class="text-sm text-muted">Jan 2026 &mdash; May 2026</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 border border-border">
+            <h3 class="text-xl font-semibold mb-1">DHBW Stuttgart</h3>
+            <p class="text-accent font-medium mb-2">Bachelor's degree, Computer Science</p>
+            <p class="text-sm text-muted">Sep 2024 &mdash; Sep 2027</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-border py-12">
+      <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted">
+        <p>&copy; 2026 Alexander Stepanov</p>
+        <div class="flex items-center gap-6">
+          <a href="mailto:stepanovalexander702@gmail.com" class="hover:text-primary transition">stepanovalexander702@gmail.com</a>
+          <a href="https://www.linkedin.com/in/alexander-stepanov-a91923243" target="_blank" rel="noopener" class="hover:text-primary transition">LinkedIn</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById('menu-btn').addEventListener('click', () => {
+        document.getElementById('mobile-menu').classList.toggle('hidden');
+      });
+      document.querySelectorAll('#mobile-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+          document.getElementById('mobile-menu').classList.add('hidden');
+        });
+      });
+    </script>
+  </body>
+</html>
