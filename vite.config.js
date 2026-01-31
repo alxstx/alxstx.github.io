@@ -1,6 +1,6 @@
 import tailwindcss from "@tailwindcss/vite";
 
 export default {
-  base: "/own-website/",
+  base: "/",
   plugins: [tailwindcss()],
 };
