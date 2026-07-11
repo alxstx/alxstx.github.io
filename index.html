@@ -4,222 +4,269 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Alexander Stepanov</title>
+    <meta name="description" content="Alexander Stepanov. Computer Science student at DHBW and UC Berkeley. Lead Engineer at HERO2, Corporate Student at Hewlett Packard Enterprise, Researcher at Berkeley EECS and IEOR." />
+    <meta name="theme-color" content="#07090d" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2307090d'/%3E%3Ctext x='16' y='23' font-size='20' text-anchor='middle' fill='%23d9a95f'%3E%E2%9C%B3%3C/text%3E%3C/svg%3E" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/style.css" />
   </head>
   <body class="antialiased">
 
+    <!-- atmosphere -->
+    <div class="fog fog-1" aria-hidden="true"></div>
+    <div class="fog fog-2" aria-hidden="true"></div>
+    <div class="fog fog-3" aria-hidden="true"></div>
+    <div class="spotlight" id="spotlight" aria-hidden="true"></div>
+
     <!-- NAV -->
-    <nav id="navbar" class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur border-b border-border transition-shadow">
-      <div class="max-w-5xl mx-auto flex items-center justify-between px-6 h-16">
-        <a href="#" class="text-lg font-bold tracking-tight">AS</a>
-        <div class="hidden md:flex items-center gap-8 text-sm font-medium text-muted">
-          <a href="#experience" class="hover:text-primary transition">Experience</a>
-          <a href="#skills" class="hover:text-primary transition">Skills</a>
-          <a href="#education" class="hover:text-primary transition">Education</a>
+    <nav id="navbar" class="fixed top-0 w-full z-50">
+      <div class="max-w-4xl mx-auto flex items-center justify-between px-6 h-16">
+        <a href="#" class="font-mono text-sm tracking-[0.3em] text-fog hover:text-amber transition">A·S</a>
+        <div class="hidden md:flex items-center gap-10 font-mono text-xs tracking-[0.15em] text-muted">
+          <a href="#experience" class="hover:text-amber transition">experience</a>
+          <a href="#education" class="hover:text-amber transition">education</a>
+          <a href="#contact" class="hover:text-amber transition">contact</a>
         </div>
-        <button id="menu-btn" class="md:hidden p-2 text-muted hover:text-primary">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <button id="menu-btn" class="md:hidden p-2 text-muted hover:text-amber transition" aria-label="Menu">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
         </button>
       </div>
-      <div id="mobile-menu" class="hidden md:hidden border-t border-border bg-white px-6 pb-4 space-y-3 text-sm font-medium text-muted">
-        <a href="#experience" class="block py-1 hover:text-primary">Experience</a>
-        <a href="#skills" class="block py-1 hover:text-primary">Skills</a>
-        <a href="#education" class="block py-1 hover:text-primary">Education</a>
+      <div id="mobile-menu" class="hidden md:hidden border-t border-hairline bg-ink/95 backdrop-blur px-6 py-4 space-y-3 font-mono text-xs tracking-[0.15em] text-muted">
+        <a href="#experience" class="block py-1 hover:text-amber transition">experience</a>
+        <a href="#education" class="block py-1 hover:text-amber transition">education</a>
+        <a href="#contact" class="block py-1 hover:text-amber transition">contact</a>
       </div>
     </nav>
 
-    <!-- HERO -->
-    <section class="min-h-screen flex items-center pt-16">
-      <div class="max-w-5xl mx-auto px-6 py-24 md:py-32 flex flex-col-reverse md:flex-row md:items-center md:gap-16">
-       <div class="flex-1">
-        <p class="text-accent font-semibold text-sm tracking-wide uppercase mb-4">Engineer &middot; Researcher &middot; Builder</p>
-        <h1 class="text-4xl md:text-6xl font-bold leading-tight tracking-tight mb-6">Alexander Stepanov</h1>
-        <p class="text-lg md:text-xl text-muted max-w-2xl mb-8 leading-relaxed">
-          Computer Science student at DHBW &amp; UC Berkeley. Lead Engineer at HERO2, Corporate Student at Hewlett Packard Enterprise, and Researcher at Berkeley IEOR - focused on algorithmic design &amp; AI research, high-performance & GPU computing.
-        </p>
-        <div class="flex flex-wrap gap-4">
-          <a href="mailto:stepanovalexander702@gmail.com" class="inline-flex items-center gap-2 border border-border px-6 py-3 rounded-lg hover:border-accent hover:text-accent transition font-semibold">
-            Get in Touch
-          </a>
-        </div>
-       </div>
-       <div class="mb-10 md:mb-0 flex-shrink-0">
-         <img src="/photo.jpg" alt="Alexander Stepanov" class="w-48 h-48 md:w-64 md:h-64 rounded-full object-cover border-4 border-border shadow-lg" />
-       </div>
-      </div>
-    </section>
+    <main class="relative z-10">
 
-    <!-- EXPERIENCE -->
-    <section id="experience" class="bg-light py-24">
-      <div class="max-w-5xl mx-auto px-6">
-        <h2 class="text-3xl font-bold tracking-tight mb-12">Experience</h2>
-        <div class="space-y-12">
+      <!-- HERO -->
+      <section>
+        <div class="max-w-4xl mx-auto px-6 pt-36 md:pt-44 pb-16 w-full">
+          <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-12">
+            <div class="flex-1">
+              <h1 class="font-serif font-light text-5xl md:text-7xl leading-[1.05] tracking-tight mb-8">
+                Alexander<br />Stepanov
+              </h1>
+              <p class="text-muted max-w-xl leading-relaxed mb-12">
+                Computer Science student at DHBW Stuttgart and UC Berkeley.
+                Focused on AI security, machine learning, and optimization,
+                with a background in high-performance and GPU computing.
+                Currently a researcher at SkyLab, Berkeley EECS, and a
+                Corporate Student in research and SWE at HPE, while
+                building HERO2.
+              </p>
 
-          <!-- Berkeley EECS / SkyLab -->
-          <div class="relative pl-8 border-l-2 border-border">
-            <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-accent"></div>
-            <p class="text-sm text-muted mb-1">Mar 2026 - Present &middot; Berkeley</p>
-            <h3 class="text-xl font-semibold">Researcher</h3>
-            <a href="https://eecs.berkeley.edu" target="_blank" rel="noopener" class="text-accent font-medium mb-2 hover:underline block">UC Berkeley Electrical Engineering &amp; Computer Sciences (EECS)</a>
-            <ul class="text-muted space-y-1 list-disc list-inside">
-              <li>Research on AI security at <a href="https://sky.cs.berkeley.edu" target="_blank" rel="noopener" class="hover:underline text-accent">SkyLab</a></li>
-              <li>Guided by Prof. Dr. Raluca Ada Popa</li>
-            </ul>
-          </div>
+              <div class="font-mono text-xs leading-7 text-dim">
+                <p class="text-muted mb-1">currently</p>
+                <p><span class="text-amber">·</span> AI security research · SkyLab · Berkeley EECS</p>
+                <p><span class="text-amber">·</span> lead engineer · HERO2</p>
+                <p><span class="text-amber">·</span> corporate student CS · research &amp; SWE · HPE</p>
+              </div>
+            </div>
 
-          <!-- Berkeley IEOR -->
-          <div class="relative pl-8 border-l-2 border-border">
-            <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-accent"></div>
-            <p class="text-sm text-muted mb-1">Jan 2026 - Present &middot; Berkeley</p>
-            <h3 class="text-xl font-semibold">Researcher</h3>
-            <a href="https://ieor.berkeley.edu" target="_blank" rel="noopener" class="text-accent font-medium mb-2 hover:underline block">Berkeley Industrial Engineering &amp; Operations Research</a>
-            <ul class="text-muted space-y-1 list-disc list-inside">
-              <li>Research at the intersection of optimization and machine learning</li>
-              <li>Guided by Prof. Dr. Hochbaum</li>
-            </ul>
-          </div>
-
-          <!-- HERO2 -->
-          <div class="relative pl-8 border-l-2 border-border">
-            <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-accent"></div>
-            <p class="text-sm text-muted mb-1">Jun 2025 - Present &middot; Berkeley, CA</p>
-            <h3 class="text-xl font-semibold">Lead Engineer</h3>
-            <a href="https://hero2.org" target="_blank" rel="noopener" class="text-accent font-medium mb-2 hover:underline block">HERO2</a>
-            <ul class="text-muted space-y-1 list-disc list-inside">
-              <li>Architecting the first US platform that tokenizes sustainable mobility into verifiable carbon credits</li>
-              <li>Built full-stack partner and admin portal from scratch: API design, PostgreSQL data modeling, React frontend</li>
-              <li>Shipped ML pipeline for location prediction with a team of Berkeley engineers</li>
-              <li>Own the full product development lifecycle: app, website, and backend infrastructure</li>
-            </ul>
-          </div>
-
-          <!-- HPE Research -->
-          <div class="relative pl-8 border-l-2 border-border">
-            <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-accent"></div>
-            <p class="text-sm text-muted mb-1">Aug 2025 - Jan 2026 &middot; B&ouml;blingen</p>
-            <h3 class="text-xl font-semibold">Research Engineering Intern - LSIP Labs</h3>
-            <a href="https://www.hpe.com" target="_blank" rel="noopener" class="text-accent font-medium mb-2 hover:underline block">Hewlett Packard Enterprise</a>
-            <ul class="text-muted space-y-1 list-disc list-inside">
-              <li>Built and optimized a GPU-accelerated hardware simulator for memristive in-memory computing accelerators using CuPy and parallel tempering algorithms</li>
-              <li>Developed novel approaches to solving combinatorial optimization problems (SAT) with Ray Tune for hyperparameter optimization across GPU clusters</li>
-            </ul>
-          </div>
-
-          <!-- HPE HPC -->
-          <div class="relative pl-8 border-l-2 border-border">
-            <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-accent"></div>
-            <p class="text-sm text-muted mb-1">Mar 2025 - Jun 2025 &middot; B&ouml;blingen</p>
-            <h3 class="text-xl font-semibold">Software Engineering Intern - HPC AI &amp; Delivery</h3>
-            <a href="https://www.hpe.com" target="_blank" rel="noopener" class="text-accent font-medium mb-2 hover:underline block">Hewlett Packard Enterprise</a>
-            <ul class="text-muted space-y-1 list-disc list-inside">
-              <li>Shipped an automation system for generating OS images for supercomputing node deployment, reducing manual configuration time for HPC clusters</li>
-            </ul>
-          </div>
-
-          <!-- HPE Services -->
-          <div class="relative pl-8 border-l-2 border-border">
-            <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-accent"></div>
-            <p class="text-sm text-muted mb-1">Oct 2024 - Dec 2024 &middot; B&ouml;blingen</p>
-            <h3 class="text-xl font-semibold">Software Engineering Intern - Services</h3>
-            <a href="https://www.hpe.com" target="_blank" rel="noopener" class="text-accent font-medium mb-2 hover:underline block">Hewlett Packard Enterprise</a>
-            <ul class="text-muted space-y-1 list-disc list-inside">
-              <li>Built an automated update system for medical X-ray imaging devices, replacing a manual process for healthcare clients</li>
-            </ul>
-          </div>
-
-          <!-- Pinetco -->
-          <div class="relative pl-8 border-l-2 border-border">
-            <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-accent"></div>
-            <p class="text-sm text-muted mb-1">Mar 2022 - Sep 2023 &middot; Wuppertal</p>
-            <h3 class="text-xl font-semibold">Junior IT Consultant</h3>
-            <a href="https://pinetco.com" target="_blank" rel="noopener" class="text-accent font-medium mb-2 hover:underline block">Pinetco</a>
-            <ul class="text-muted space-y-1 list-disc list-inside">
-              <li>Supported software testing and project coordination for client-focused apps and websites</li>
-              <li>Worked with HubSpot and managed multiple digital projects</li>
-            </ul>
-          </div>
-
-          <!-- Freelance -->
-          <div class="relative pl-8 border-l-2 border-border">
-            <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-accent"></div>
-            <p class="text-sm text-muted mb-1">Nov 2020 - Mar 2022</p>
-            <h3 class="text-xl font-semibold">Freelance Software Programmer &amp; Python Educator</h3>
-            <p class="text-accent font-medium mb-2">Self-employed</p>
-            <ul class="text-muted space-y-1 list-disc list-inside">
-              <li>Shipped automation tools, web scrapers, and data pipelines for small business clients, started at age 16</li>
-              <li>Taught programming fundamentals to young students using Python</li>
-            </ul>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section id="skills" class="py-24">
-      <div class="max-w-5xl mx-auto px-6">
-        <h2 class="text-3xl font-bold tracking-tight mb-12">Skills</h2>
-        <div class="flex flex-wrap gap-3">
-          <span class="px-4 py-2 bg-light rounded-full text-sm font-medium border border-border hover:border-accent hover:text-accent transition cursor-default">Python</span>
-          <span class="px-4 py-2 bg-light rounded-full text-sm font-medium border border-border hover:border-accent hover:text-accent transition cursor-default">TypeScript</span>
-          <span class="px-4 py-2 bg-light rounded-full text-sm font-medium border border-border hover:border-accent hover:text-accent transition cursor-default">SQL</span>
-          <span class="px-4 py-2 bg-light rounded-full text-sm font-medium border border-border hover:border-accent hover:text-accent transition cursor-default">PostgreSQL</span>
-          <span class="px-4 py-2 bg-light rounded-full text-sm font-medium border border-border hover:border-accent hover:text-accent transition cursor-default">CuPy</span>
-          <span class="px-4 py-2 bg-light rounded-full text-sm font-medium border border-border hover:border-accent hover:text-accent transition cursor-default">Ray Tune</span>
-          <span class="px-4 py-2 bg-light rounded-full text-sm font-medium border border-border hover:border-accent hover:text-accent transition cursor-default">FastAPI</span>
-          <span class="px-4 py-2 bg-light rounded-full text-sm font-medium border border-border hover:border-accent hover:text-accent transition cursor-default">React</span>
-          <span class="px-4 py-2 bg-light rounded-full text-sm font-medium border border-border hover:border-accent hover:text-accent transition cursor-default">Flutter</span>
-          <span class="px-4 py-2 bg-light rounded-full text-sm font-medium border border-border hover:border-accent hover:text-accent transition cursor-default">Parallel Computing</span>
-          <span class="px-4 py-2 bg-light rounded-full text-sm font-medium border border-border hover:border-accent hover:text-accent transition cursor-default">GPU Computing</span>
-          <span class="px-4 py-2 bg-light rounded-full text-sm font-medium border border-border hover:border-accent hover:text-accent transition cursor-default">Machine Learning</span>
-          <span class="px-4 py-2 bg-light rounded-full text-sm font-medium border border-border hover:border-accent hover:text-accent transition cursor-default">Optimization</span>
-          <span class="px-4 py-2 bg-light rounded-full text-sm font-medium border border-border hover:border-accent hover:text-accent transition cursor-default">Prisma</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- EDUCATION -->
-    <section id="education" class="bg-light py-24">
-      <div class="max-w-5xl mx-auto px-6">
-        <h2 class="text-3xl font-bold tracking-tight mb-12">Education</h2>
-        <div class="grid md:grid-cols-2 gap-6">
-          <div class="bg-white rounded-xl p-6 border border-border">
-            <a href="https://www.berkeley.edu" target="_blank" rel="noopener" class="text-xl font-semibold mb-1 hover:underline block">University of California, Berkeley</a>
-            <p class="text-accent font-medium mb-2">Bachelor's degree, Computer Science</p>
-            <p class="text-sm text-muted">Jan 2026 - May 2026</p>
-          </div>
-          <div class="bg-white rounded-xl p-6 border border-border">
-            <a href="https://www.dhbw-stuttgart.de" target="_blank" rel="noopener" class="text-xl font-semibold mb-1 hover:underline block">DHBW Stuttgart</a>
-            <p class="text-accent font-medium mb-2">Bachelor's degree, Computer Science</p>
-            <p class="text-sm text-muted">Sep 2024 - Sep 2027</p>
+            <figure class="flex-shrink-0 md:pt-10">
+              <img src="/photo.jpg" alt="Alexander Stepanov" class="dossier w-36 h-36 md:w-44 md:h-44 object-cover border border-hairline" />
+            </figure>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section id="experience" class="py-28">
+        <div class="max-w-4xl mx-auto px-6">
+          <div class="reveal flex items-baseline gap-4 mb-16">
+            <span class="section-index">§ 01</span>
+            <h2 class="font-serif font-light text-3xl md:text-4xl tracking-tight">Experience</h2>
+          </div>
+
+          <div class="space-y-14">
+
+            <!-- Berkeley EECS / SkyLab -->
+            <article class="entry reveal pl-8">
+              <p class="font-mono text-xs text-dim mb-2">Mar 2026 - present · Berkeley</p>
+              <h3 class="entry-title font-serif text-2xl mb-1">Researcher</h3>
+              <a href="https://sky.cs.berkeley.edu" target="_blank" rel="noopener" class="font-mono text-xs tracking-[0.1em] text-amber hover:text-amber-bright transition">SkyLab · UC Berkeley EECS ↗</a>
+              <div class="text-muted leading-relaxed mt-4 max-w-2xl">
+                <p>Research on AI security @ SkyLab</p>
+                <p>Guided by Prof. Dr. Raluca Ada Popa</p>
+              </div>
+            </article>
+
+            <!-- Berkeley IEOR -->
+            <article class="entry reveal pl-8">
+              <p class="font-mono text-xs text-dim mb-2">Jan 2026 - May 2026 · Berkeley</p>
+              <h3 class="entry-title font-serif text-2xl mb-1">Researcher</h3>
+              <a href="https://ieor.berkeley.edu" target="_blank" rel="noopener" class="font-mono text-xs tracking-[0.1em] text-amber hover:text-amber-bright transition">Berkeley IEOR ↗</a>
+              <div class="text-muted leading-relaxed mt-4 max-w-2xl">
+                <p>Research at the intersection of optimization and machine learning,</p>
+                <p>Guided by Prof. Dr. Hochbaum</p>
+              </div>
+            </article>
+
+            <!-- HERO2 -->
+            <article class="entry reveal pl-8">
+              <p class="font-mono text-xs text-dim mb-2">Jun 2025 - present · Berkeley, CA</p>
+              <h3 class="entry-title font-serif text-2xl mb-1">Lead Engineer</h3>
+              <a href="https://hero2.org" target="_blank" rel="noopener" class="font-mono text-xs tracking-[0.1em] text-amber hover:text-amber-bright transition">HERO2 ↗</a>
+              <p class="text-muted leading-relaxed mt-4 max-w-2xl">
+                The first US platform tokenizing sustainable mobility into verifiable carbon credits.
+              </p>
+            </article>
+
+            <!-- HPE -->
+            <article class="entry reveal pl-8">
+              <p class="font-mono text-xs text-dim mb-2">Sep 2024 - present · Böblingen, Germany</p>
+              <h3 class="entry-title font-serif text-2xl mb-1">Corporate Student, Computer Science</h3>
+              <a href="https://www.hpe.com" target="_blank" rel="noopener" class="font-mono text-xs tracking-[0.1em] text-amber hover:text-amber-bright transition">Hewlett Packard Enterprise ↗</a>
+
+              <div class="mt-6 space-y-6 max-w-2xl">
+                <div>
+                  <p class="font-mono text-xs text-dim mb-1">Aug 2025 - Jan 2026 · LSIP Labs</p>
+                  <p class="text-fog text-sm font-medium mb-1">Research Engineering Intern</p>
+                  <p class="text-muted text-sm leading-relaxed">
+                    Development and optimization of a GPU-based hardware simulator for
+                    in-memory computing accelerators that solve combinatorial optimization
+                    problems using memristive SAT solvers.
+                  </p>
+                </div>
+                <div>
+                  <p class="font-mono text-xs text-dim mb-1">Mar 2025 - Jun 2025 · HPC AI &amp; Delivery</p>
+                  <p class="text-fog text-sm font-medium mb-1">Software Engineering Intern</p>
+                  <p class="text-muted text-sm leading-relaxed">
+                    Developed an automation system for the generation of operating system
+                    images tailored for deployment on supercomputing nodes.
+                  </p>
+                </div>
+                <div>
+                  <p class="font-mono text-xs text-dim mb-1">Oct 2024 - Dec 2024 · Services</p>
+                  <p class="text-fog text-sm font-medium mb-1">Software Engineering Intern</p>
+                  <p class="text-muted text-sm leading-relaxed">
+                    Designed and implemented a software solution to automate the update
+                    process for X-ray imaging devices.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <!-- Pinetco -->
+            <article class="entry reveal pl-8">
+              <p class="font-mono text-xs text-dim mb-2">Mar 2022 - Sep 2023 · Wuppertal, Germany</p>
+              <h3 class="entry-title font-serif text-2xl mb-1">IT Consultant</h3>
+              <a href="https://pinetco.com" target="_blank" rel="noopener" class="font-mono text-xs tracking-[0.1em] text-amber hover:text-amber-bright transition">Pinetco ↗</a>
+              <p class="text-muted leading-relaxed mt-4 max-w-2xl">
+                Supporting software testing and project coordination, contributing to the
+                development of client-focused apps and websites.
+              </p>
+            </article>
+
+            <!-- Freelance -->
+            <article class="entry reveal pl-8">
+              <p class="font-mono text-xs text-dim mb-2">Nov 2020 - Mar 2022</p>
+              <h3 class="entry-title font-serif text-2xl mb-1">Software Programmer &amp; Python Teacher</h3>
+              <p class="font-mono text-xs tracking-[0.1em] text-amber">Self Employed</p>
+              <p class="text-muted leading-relaxed mt-4 max-w-2xl">
+                Engineering automation solutions for small businesses &amp; teaching kids
+                Python at 14 y.
+              </p>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- EDUCATION -->
+      <section id="education" class="py-28">
+        <div class="max-w-4xl mx-auto px-6">
+          <div class="reveal flex items-baseline gap-4 mb-16">
+            <span class="section-index">§ 02</span>
+            <h2 class="font-serif font-light text-3xl md:text-4xl tracking-tight">Education</h2>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-px bg-hairline border border-hairline">
+            <div class="reveal bg-ink p-8">
+              <p class="font-mono text-xs text-dim mb-3">Jan 2026 - May 2026</p>
+              <a href="https://www.berkeley.edu" target="_blank" rel="noopener" class="font-serif text-xl hover:text-amber-bright transition block mb-1">University of California, Berkeley</a>
+              <p class="text-muted text-sm">Bachelor's degree, Computer Science</p>
+            </div>
+            <div class="reveal bg-ink p-8">
+              <p class="font-mono text-xs text-dim mb-3">Sep 2024 - Sep 2027</p>
+              <a href="https://www.dhbw-stuttgart.de" target="_blank" rel="noopener" class="font-serif text-xl hover:text-amber-bright transition block mb-1">DHBW Stuttgart</a>
+              <p class="text-muted text-sm">Bachelor's degree, Computer Science</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="py-28">
+        <div class="max-w-4xl mx-auto px-6">
+          <div class="reveal flex items-baseline gap-4 mb-12">
+            <span class="section-index">§ 03</span>
+            <h2 class="font-serif font-light text-3xl md:text-4xl tracking-tight">Contact</h2>
+          </div>
+          <div class="reveal">
+            <a href="mailto:stepanovalexander702@gmail.com" class="font-serif italic text-lg md:text-xl text-fog hover:text-amber-bright transition break-all">
+              stepanovalexander702@gmail.com
+            </a>
+            <div class="mt-10">
+              <a href="https://www.linkedin.com/in/alxstx" target="_blank" rel="noopener" class="font-mono text-xs tracking-[0.15em] text-dim hover:text-amber transition">
+                linkedin / alxstx ↗
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
 
     <!-- FOOTER -->
-    <footer class="border-t border-border py-12">
-      <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted">
-        <p>&copy; 2026 Alexander Stepanov</p>
-        <div class="flex items-center gap-6">
-          <a href="mailto:stepanovalexander702@gmail.com" class="hover:text-primary transition">stepanovalexander702@gmail.com</a>
-          <a href="https://www.linkedin.com/in/alexander-stepanov-a91923243" target="_blank" rel="noopener" class="hover:text-primary transition">LinkedIn</a>
-        </div>
+    <footer class="relative z-10 border-t border-hairline py-10">
+      <div class="max-w-4xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-3 font-mono text-[0.65rem] tracking-[0.15em] text-dim">
+        <p>© 2026 Alexander Stepanov</p>
+        <p>Berkeley · Stuttgart</p>
       </div>
     </footer>
 
     <script>
-      document.getElementById('menu-btn').addEventListener('click', () => {
-        document.getElementById('mobile-menu').classList.toggle('hidden');
-      });
-      document.querySelectorAll('#mobile-menu a').forEach(link => {
-        link.addEventListener('click', () => {
-          document.getElementById('mobile-menu').classList.add('hidden');
+      // mobile menu
+      const menuBtn = document.getElementById('menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+      mobileMenu.querySelectorAll('a').forEach(link =>
+        link.addEventListener('click', () => mobileMenu.classList.add('hidden'))
+      );
+
+      // nav backdrop after scroll
+      const navbar = document.getElementById('navbar');
+      const onScroll = () => navbar.classList.toggle('scrolled', window.scrollY > 12);
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+
+      // cursor spotlight
+      const spotlight = document.getElementById('spotlight');
+      let mx = 0, my = 0, raf = null;
+      window.addEventListener('mousemove', (e) => {
+        mx = e.clientX; my = e.clientY;
+        if (!raf) raf = requestAnimationFrame(() => {
+          spotlight.style.setProperty('--mx', mx + 'px');
+          spotlight.style.setProperty('--my', my + 'px');
+          raf = null;
         });
-      });
+      }, { passive: true });
+
+      // scroll reveal
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     </script>
   </body>
 </html>
