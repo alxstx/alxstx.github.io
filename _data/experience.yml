@@ -1,0 +1,86 @@
+# Experience overview shown on the home page (rendered by _includes/experience.liquid).
+# Facts (title, org, dates, location, url) match the LinkedIn snapshot in linkedin.yml (2026-10-10).
+# Each "[PROMPT ...]" line is a placeholder whose prompt lives in PROMPTS.md#experience-lines.
+# Dates are YYYY-MM; use "present" for current roles. Order is as shown on the page (HPE group second).
+# Sub-roles under `roles:` may set their own `location` when it differs from the group's.
+
+experience:
+  - title: Researcher
+    org: SkyLab, UC Berkeley EECS
+    url: https://sky.cs.berkeley.edu
+    location: Berkeley, CA
+    start: 2026-03
+    end: present
+    line: "AI security research and co-author of [Pincer](https://arxiv.org/abs/2610.02569) · Advisor: Prof. Dr. Raluca Ada Popa"
+
+  - title: Corporate Student, Computer Science
+    org: Hewlett Packard Enterprise
+    url: https://www.hpe.com
+    location: Böblingen, Germany
+    start: 2024-09
+    end: present
+    roles:
+      - title: Research Scientist Intern
+        team: HPE Labs
+        location: Milpitas, CA
+        start: 2026-06
+        end: 2026-10
+        line: "Researching algorithms for LLM inference optimization"
+      - title: Research Engineering Intern
+        team: LSIP Labs
+        start: 2025-08
+        end: 2026-01
+        line: "Developed and optimized a GPU-based simulator for in-memory computing hardware using memristive SAT solvers"
+      - title: Software Engineering Intern
+        team: HPC AI & Delivery Services
+        start: 2025-03
+        end: 2025-06
+        line: "Automated the generation of operating system images for deployment on supercomputing nodes"
+      - title: Software Engineering Intern
+        team: Services
+        start: 2024-10
+        end: 2024-12
+        line: "Built software to automate updates for X-ray imaging devices"
+
+  - title: Researcher
+    org: Berkeley IEOR
+    url: https://ieor.berkeley.edu
+    location: Berkeley, CA
+    start: 2026-01
+    end: 2026-05
+    line: "Research connecting optimization and machine learning · Advisor: Prof. Dr. Hochbaum"
+
+  - title: Lead Engineer
+    org: HERO2
+    url: https://hero2.org
+    location: Remote
+    start: 2025-06
+    end: 2026-08
+    line: "Co-led app and web infrastructure and ML pipeline development for a sustainable mobility platform; mentored four interns"
+
+  - title: IT Consultant
+    org: Pinetco
+    url: https://pinetco.com
+    location: Wuppertal, Germany
+    start: 2022-03
+    end: 2023-09
+    line: "Supported software testing and coordinated projects for client apps and websites"
+
+  - title: Software Programmer & Python Teacher
+    org: Self Employed
+    start: 2020-11
+    end: 2022-03
+    line: "Built automation solutions for small businesses and taught children Python"
+
+education:
+  - degree: Bachelor's degree, Computer Science
+    school: University of California, Berkeley
+    url: https://www.berkeley.edu
+    start: 2026-01
+    end: 2026-05
+
+  - degree: Bachelor's degree, Computer Science
+    school: DHBW Stuttgart
+    url: https://www.dhbw-stuttgart.de
+    start: 2024-09
+    end: 2027-09

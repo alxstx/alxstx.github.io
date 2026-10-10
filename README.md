@@ -1,46 +1,32 @@
-# Alexander Stepanov — Portfolio
+# alexanderstepanov.cv
 
-A minimal one-page portfolio built with **Vite** and **Tailwind CSS v4**.
+Personal site built on the [al-folio](https://github.com/alshedivat/al-folio) v1 Jekyll starter
+(runtime comes from the `al_folio_*` gems pinned in `Gemfile`).
 
-## Run Locally
+Prompts used to write the site text (and for the fields still empty, like the SEO description) live in [PROMPTS.md](PROMPTS.md).
+
+## Where content lives
+
+| What                   | File                       |
+| ---------------------- | -------------------------- |
+| Name, description, SEO | `_config.yml`              |
+| Intro (home page)      | `_pages/about.md`          |
+| Experience, education  | `_data/experience.yml`     |
+| Interests              | `_pages/interests.md`      |
+| Publications           | `_bibliography/papers.bib` |
+| Social links           | `_data/socials.yml`        |
+| Photo                  | `assets/img/prof_pic.jpg`  |
+
+## Run locally
 
 ```bash
-npm install
-npm run dev
+bundle config set --local path vendor/bundle
+bundle install
+bundle exec jekyll serve   # http://localhost:4000
 ```
 
-Open `http://localhost:5173` in your browser.
+Or with Docker: `docker compose up`.
 
-## Build for Production
+## Deploy
 
-```bash
-npm run build
-```
-
-Output is in the `dist/` folder.
-
-## Deploy to Vercel
-
-1. Push this repo to GitHub.
-2. Go to [vercel.com](https://vercel.com), import the repository.
-3. Vercel auto-detects Vite — just click **Deploy**.
-
-## Deploy to GitHub Pages
-
-1. Install the gh-pages package:
-   ```bash
-   npm install -D gh-pages
-   ```
-2. Add to `package.json` scripts:
-   ```json
-   "deploy": "npm run build && gh-pages -d dist"
-   ```
-3. Set `base` in `vite.config.js` to your repo name:
-   ```js
-   export default { base: '/your-repo-name/', ... }
-   ```
-4. Run `npm run deploy`.
-
-## CV
-
-Place your CV file as `public/cv.pdf` — it will be served at `/cv.pdf`.
+Pushing to `master` builds with Jekyll and deploys to GitHub Pages via `.github/workflows/deploy.yml`.

@@ -1,16 +1,10 @@
 {
-  "name": "own-website",
   "private": true,
-  "version": "0.0.0",
-  "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "lint:prettier": "prettier . --check"
   },
   "devDependencies": {
-    "@tailwindcss/vite": "^4.1.18",
-    "tailwindcss": "^4.1.18",
-    "vite": "^7.2.4"
+    "@shopify/prettier-plugin-liquid": "^1.11.1",
+    "prettier": "^3.9.9"
   }
 }

@@ -1,0 +1,77 @@
+{% comment %}
+  Experience and education overview for the about page.
+  Data: _data/experience.yml. Markup mirrors al_folio_core's news table so it inherits theme styling.
+{% endcomment %}
+{% capture present %}present{% endcapture %}
+
+<div style="clear: both"></div>
+<h2>experience</h2>
+<div class="experience table-responsive">
+  <table class="table table-sm table-borderless">
+    {% for e in site.data.experience.experience %}
+      <tr>
+        <th scope="row" style="width: 20%; white-space: nowrap">
+          {{ e.start | append: '-01' | date: '%b %Y' }} -
+          {% if e.end == present %}present{% else %}{{ e.end | append: '-01' | date: '%b %Y' }}{% endif %}
+        </th>
+        <td>
+          <strong>{{ e.title }}</strong> ·
+          {% if e.url -%}
+            <a href="{{ e.url }}">{{ e.org }}</a>
+          {%- else -%}
+            {{- e.org -}}
+          {%- endif %}
+          {% if e.location -%}
+            <span class="text-muted"> · {{ e.location }}</span>
+          {%- endif %}
+          {% if e.line -%}
+            <br>
+            {{ e.line | markdownify | remove: '<p>' | remove: '</p>' -}}
+          {%- endif %}
+          {% if e.roles %}
+            <ul class="mb-0 pl-3">
+              {% for r in e.roles %}
+                <li>
+                  <strong>{{ r.title }}, {{ r.team }}</strong>
+                  <span class="text-muted">
+                    · {{ r.start | append: '-01' | date: '%b %Y' }} -
+                    {% if r.end == present %}present{% else %}{{ r.end | append: '-01' | date: '%b %Y' }}{% endif %}
+                    {%- if r.location %} · {{ r.location }}{% endif %}
+                  </span>
+                  {% if r.line -%}
+                    <br>
+                    {{ r.line | markdownify | remove: '<p>' | remove: '</p>' -}}
+                  {%- endif %}
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </td>
+      </tr>
+    {% endfor %}
+  </table>
+</div>
+
+<h2>education</h2>
+<div class="education table-responsive">
+  <table class="table table-sm table-borderless">
+    {% for e in site.data.experience.education %}
+      <tr>
+        <th scope="row" style="width: 20%; white-space: nowrap">
+          {{ e.start | append: '-01' | date: '%b %Y' }} - {{ e.end | append: '-01' | date: '%b %Y' }}
+        </th>
+        <td>
+          <strong>
+            {%- if e.url -%}
+              <a href="{{ e.url }}">{{ e.school }}</a>
+            {%- else -%}
+              {{- e.school -}}
+            {%- endif -%}
+          </strong>
+          <br>
+          {{ e.degree }}
+        </td>
+      </tr>
+    {% endfor %}
+  </table>
+</div>

@@ -1,0 +1,153 @@
+# Snapshot of https://www.linkedin.com/in/alxstx/ taken 2026-10-10, copied verbatim.
+# Source material for the prompts in PROMPTS.md. Excluded from the Jekyll build.
+# Personal contact details (birthday) intentionally left out.
+
+HEADLINE: |
+  AI Security Research @ Berkeley SkyLab | ML Systems @ HPE
+LOCATION: Stuttgart
+CONTACT_INFO:
+  website: https://alexanderstepanov.cv/
+  email: stepanovalexander702@gmail.com
+ABOUT: |
+  building the future
+  alexanderstepanov.cv
+FEATURED: NONE
+EXPERIENCE:
+  - company: Hewlett Packard Enterprise
+    company_url: https://www.linkedin.com/company/1025/
+    title: Research Scientist Intern HPE Labs
+    employment_type: Full-time
+    start: "2026-06"
+    end: present
+    location: Milpitas, California, United States
+    work_mode: On-site
+    description: |
+      Research on building algorithms for LLM inference optimization
+  - company: UC Berkeley Electrical Engineering & Computer Sciences (EECS)
+    company_url: https://www.linkedin.com/school/18422873/
+    title: Researcher
+    start: "2026-03"
+    end: present
+    location: Berkeley
+    description: |
+      Research on AI security @ SkyLab
+      Advisor: Prof. Dr. Raluca Ada Popa
+      https://arxiv.org/abs/2610.02569
+  - company: Hewlett Packard Enterprise
+    company_url: https://www.linkedin.com/company/1025/
+    title: Corporate Student Computer Science
+    employment_type: Full-time
+    start: "2024-09"
+    end: present
+    location: Böblingen, Baden-Württemberg, Germany
+    description: NONE
+  - company: HERO2
+    company_url: https://www.linkedin.com/company/108131135/
+    title: Lead Engineer
+    employment_type: Freelance
+    start: "2025-06"
+    end: "2026-08"
+    location: Berkeley, California, United States
+    work_mode: Remote
+    description: |
+      Co-led building up app & web infra and ml pipelines; mentored 4 interns
+  - company: Berkeley Industrial Engineering & Operations Research
+    company_url: https://www.linkedin.com/company/78392732/
+    title: Researcher
+    start: "2026-01"
+    end: "2026-05"
+    location: Berkeley
+    description: |
+      Research at the intersection of optimization and machine learning,
+      Advisor: Prof. Dr. Hochbaum
+  - company: Hewlett Packard Enterprise
+    company_url: https://www.linkedin.com/company/1025/
+    title: Research Engineering Intern HPE LSIP Labs
+    employment_type: Full-time
+    start: "2025-08"
+    end: "2026-01"
+    location: Böblingen
+    work_mode: On-site
+    description: |
+      Development and optimization of a GPU-based hardware simulator for in-memory computing accelerators that solve combinatorial optimization problems using memristive SAT solvers.
+  - company: Hewlett Packard Enterprise
+    company_url: https://www.linkedin.com/company/1025/
+    title: Software Engineering Intern HPE HPC AI & Delivery Services
+    employment_type: Full-time
+    start: "2025-03"
+    end: "2025-06"
+    location: Böblingen
+    work_mode: On-site
+    description: |
+      Developed a automation system for the generation of Operating system images tailored for deployment on supercomputing nodes.
+  - company: Hewlett Packard Enterprise
+    company_url: https://www.linkedin.com/company/1025/
+    title: Software Engineering Intern HPE Services
+    employment_type: Full-time
+    start: "2024-10"
+    end: "2024-12"
+    location: Böblingen
+    work_mode: On-site
+    description: |
+      Designed and implemented a software solution to automate the update process for X-ray imaging devices.
+  - company: Pinetco
+    company_url: https://www.linkedin.com/company/5334041/
+    title: IT Consultant
+    employment_type: Part-time
+    start: "2022-03"
+    end: "2023-09"
+    location: Wuppertal, North Rhine-Westphalia, Germany
+    work_mode: Hybrid
+    description: |
+      Supporting software testing and project coordination, contributing to  development of client-focused apps and websites
+  - company: Self Employed
+    company_url: https://www.linkedin.com/company/33200573/
+    title: Software Programmer & Python Teacher
+    employment_type: Freelance
+    start: "2020-11"
+    end: "2022-03"
+    description: |
+      Engineering automation solutions for small businesses & teaching kids python at 14 y.
+EDUCATION:
+  - school: University of California, Berkeley
+    degree: Bachelor's degree
+    field: Computer Science
+    start: "2026-01"
+    end: "2026-05"
+  - school: DHBW Stuttgart
+    degree: Bachelor's degree
+    field: Computer Science
+    start: "2024-09"
+    end: "2027-09"
+PROJECTS: NONE
+PUBLICATIONS: NONE # the Pincer preprint is linked from the SkyLab role and is in _bibliography/papers.bib
+HONORS: NONE
+CERTS: NONE
+LANGUAGES: NONE
+VOLUNTEER:
+  - organization: Self-employed
+    role: Tutor
+    cause: Education
+    start: "2020-01"
+    end: "2024-09"
+    description: |
+      i had the opportunity to provide tutoring in english and german for children with a migration background & teach it security to university students
+  - organization: 2hearts
+    role: Member
+    start: "2025-07"
+    end: present
+    description: NONE
+COURSES_AND_TEST_SCORES: NONE
+ACTIVITY:
+  - date: "2026-10-05"
+    url: https://www.linkedin.com/feed/update/urn:li:activity:7512938323074682881/
+    text: |
+      As AI agents become more autonomous, how can we protect them against different types of attacks without limiting their ability to get useful work done?
+
+      We explore this question in our new work, Pincer: a new security layer for autonomous agents.
+
+      Pincer uses a digital twin that learns a user's preferences and makes context-aware authorization decisions on their behalf, enabling dynamic, user-specific least privilege.
+  - date: "2026-04-16"
+    url: https://www.linkedin.com/feed/update/urn:li:activity:7450666883055370240/
+    text: |
+      I'm grateful to have spoken at the Stanford Software Theory Group about my research internship at HPE Labs. I presented work developed with the Large-Scale Integrated Photonics team on in-memory computing for hard optimization problems, with a focus on stochastic local search methods for SAT solving. It was a privilege to present at Stanford University and engage with such a thoughtful research community.
