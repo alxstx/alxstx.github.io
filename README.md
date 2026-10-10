@@ -3,7 +3,7 @@
 Personal site built on the [al-folio](https://github.com/alshedivat/al-folio) v1 Jekyll starter
 (runtime comes from the `al_folio_*` gems pinned in `Gemfile`).
 
-Prompts used to write the site text (and for the fields still empty, like the SEO description) live in [PROMPTS.md](PROMPTS.md).
+Site text lives in the files listed below.
 
 ## Where content lives
 

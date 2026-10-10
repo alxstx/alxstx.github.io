@@ -1,6 +1,5 @@
 # Experience overview shown on the home page (rendered by _includes/experience.liquid).
-# Facts (title, org, dates, location, url) match the LinkedIn snapshot in linkedin.yml (2026-10-10).
-# Each "[PROMPT ...]" line is a placeholder whose prompt lives in PROMPTS.md#experience-lines.
+# Facts (title, org, dates, location, url) follow the LinkedIn profile as of 2026-10-10.
 # Dates are YYYY-MM; use "present" for current roles. Order is as shown on the page (HPE group second).
 # Sub-roles under `roles:` may set their own `location` when it differs from the group's.
 

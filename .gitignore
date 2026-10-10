@@ -19,3 +19,7 @@ vendor
 # Python bytecode from bin/ helper scripts
 __pycache__/
 *.pyc
+
+# Local-only content notes (kept out of the public repo)
+PROMPTS.md
+linkedin.yml
