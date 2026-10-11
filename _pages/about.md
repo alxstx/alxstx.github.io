@@ -18,6 +18,6 @@ latest_posts:
   enabled: false
 ---
 
-Our world will be very soon full of autonomous AI systems. My goal is to ensure that as we give them more autonomy, they remain aligned with human intent, even under adversarial manipulation, conflicting incentives, and pressure to finish a task. This is the focus of my research at UC Berkeley’s SkyLab.
+Our world will be very soon full of autonomous AI systems. My goal is to ensure that as we give them more autonomy, they remain aligned with human intent, even under adversarial manipulation and attacks. This is the focus of my research at UC Berkeley Sky Computing Lab.
 
 {% include experience.liquid %}
